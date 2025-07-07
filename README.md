@@ -29,3 +29,76 @@ bash scripts/setup_zsh.sh
 - `scripts/` – collection of shell scripts used to install and configure tools. Includes helpers for installing Homebrew and configuring zsh.
 
 Further instructions will be added as additional tools are incorporated.
+
+## Additional Tools
+
+### Grafana
+
+Install and start Grafana using Homebrew:
+
+```bash
+brew install grafana
+brew services start grafana
+```
+
+### DBeaver
+
+```bash
+brew install --cask dbeaver-community
+```
+
+### PostgreSQL
+
+```bash
+brew install postgresql@17
+```
+
+### Ngrok
+
+```bash
+brew install ngrok
+```
+
+After installing, obtain your auth token from Ngrok and configure it before use.
+
+### n8n and Ngrok
+
+Expose port `5678` with Ngrok and store the resulting HTTPS URL in an `.env` file under the `n8n` folder:
+
+```env
+WEBHOOK_URL=https://acd.ngrok-free.app
+```
+
+#### Local installation
+
+Install n8n globally and start it so that it can access files on your machine:
+
+```bash
+npm install -g n8n
+n8n start
+```
+
+#### Docker (optional)
+
+Create a persistent volume and start the container interactively:
+
+```bash
+docker volume create n8n_data
+docker run -it --rm \
+  --name n8n \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  -e WEBHOOK_URL=https://acd.ngrok-free.app \
+  docker.n8n.io/n8nio/n8n
+```
+
+To run n8n in the background:
+
+```bash
+docker run -d \
+  --name n8n \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  -e WEBHOOK_URL=https://acd.ngrok-free.app \
+  docker.n8n.io/n8nio/n8n
+```
