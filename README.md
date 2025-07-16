@@ -102,3 +102,84 @@ docker run -d \
   -e WEBHOOK_URL=https://acd.ngrok-free.app \
   docker.n8n.io/n8nio/n8n
 ```
+
+### npm and uv
+
+Use npm or [uv](https://github.com/astral-sh/uv) for package installation. Both provide fast dependency management for JavaScript and Python environments.
+
+### ttl.sh
+
+[`ttl.sh`](https://ttl.sh) is a lightweight container registry used for local development images.
+
+### Portainer
+
+Portainer offers a graphical dashboard to manage Docker containers and images.
+
+### Sterling PDF
+
+Sterling PDF converts and merges documents. Keep it available for local testing.
+
+### rtrvr.ai
+
+`rtrvr.ai` can run browser automation against your Git repositories.
+
+### btop
+
+Install the modern system monitor with Homebrew:
+
+```bash
+brew install btop
+```
+
+### GitHub CLI
+
+Use GitHub's `gh` CLI to create pull requests from the terminal:
+
+```bash
+brew install gh
+```
+
+### PNPM
+
+An alternative JavaScript package manager:
+
+```bash
+brew install pnpm
+```
+
+### PM2
+
+PM2 keeps local services running in the background:
+
+```bash
+npm install -g pm2
+```
+
+### Hoppscotch
+
+Hoppscotch provides a simple interface for testing HTTP APIs.
+
+### Tailscale
+
+Tailscale connects locally hosted apps to your phone or other devices:
+
+```bash
+brew install --cask tailscale
+```
+
+### Docker Compose
+
+Docker Compose works with Docker running under Colima for container orchestration.
+
+### Uptime Kuma
+
+Monitor endpoints and send errors to Telegram:
+
+```bash
+brew install uptime-kuma
+```
+
+### Homepage
+
+Homepage manages links and includes custom code for triggering jobs.
+
