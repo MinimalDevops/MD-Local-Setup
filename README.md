@@ -167,6 +167,15 @@ Tailscale connects locally hosted apps to your phone or other devices:
 brew install --cask tailscale
 ```
 
+### Cloudflare Tunnel
+
+Use Cloudflare's tunnel service to share local sites under the free plan. After running `cloudflared login`, start a tunnel for your app:
+
+```bash
+brew install cloudflared
+cloudflared tunnel --url http://localhost:8080
+```
+
 ### Docker Compose
 
 Docker Compose works with Docker running under Colima for container orchestration.
