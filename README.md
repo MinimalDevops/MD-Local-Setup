@@ -159,6 +159,209 @@ npm install -g pm2
 
 Hoppscotch provides a simple interface for testing HTTP APIs.
 
+### fzf
+
+Install the fuzzy finder to quickly search through lists of options from the terminal:
+
+```bash
+brew install fzf
+```
+
+Once installed, fzf can help drive Git workflows. For example, interactively switch to another branch with:
+
+```bash
+git branch | fzf | cut -c 3- | xargs git checkout
+```
+
+### eza
+
+Use eza as a modern replacement for `ls` that adds icons, colors and Git status information:
+
+```bash
+brew install eza
+```
+
+### thefuck
+
+The Fuck corrects previous console commands. After installing it, add the suggested alias to your shell configuration (`eval "$(thefuck --alias)"`).
+
+```bash
+brew install thefuck
+```
+
+### zoxide
+
+zoxide tracks the directories you visit and lets you jump to them with a short command.
+
+```bash
+brew install zoxide
+```
+
+To enable it in zsh, add `eval "$(zoxide init zsh)"` to your `.zshrc`.
+
+### zi
+
+Zi (formerly Zinit) is a fast zsh plugin manager.
+
+```bash
+brew install zi
+```
+
+After installing, source Zi in your `.zshrc` according to the project's documentation to begin loading plugins.
+
+### nushell
+
+Nushell provides a modern, data-focused shell.
+
+```bash
+brew install nushell
+```
+
+Launch it with `nu` and exit with `exit` when finished.
+
+### x-cmd
+
+x-cmd offers a cross-shell command runner with a curated catalog of automations.
+
+```bash
+brew install x-cmd/tap/x-cmd
+```
+
+After installation, follow the prompts to initialize it for your preferred shell.
+
+### jq
+
+jq is a lightweight JSON processor.
+
+```bash
+brew install jq
+```
+
+Use it to parse JSON responses, e.g. `cat file.json | jq '.property'`.
+
+### yq
+
+yq brings jq-style processing to YAML files.
+
+```bash
+brew install yq
+```
+
+### ncdu
+
+ncdu helps inspect disk usage via a text-based interface.
+
+```bash
+brew install ncdu
+```
+
+Run `ncdu` inside a directory to analyze its disk usage interactively.
+
+### duf
+
+duf provides a more readable overview of mounted drives and disk usage.
+
+```bash
+brew install duf
+```
+
+### ripgrep
+
+ripgrep (`rg`) is a fast code search tool.
+
+```bash
+brew install ripgrep
+```
+
+### mtr
+
+My Traceroute (`mtr`) combines traceroute and ping.
+
+```bash
+brew install mtr
+```
+
+Administrative privileges may be required for certain network interfaces.
+
+### termshark
+
+termshark provides a terminal user interface for `tshark` packet captures.
+
+```bash
+brew install termshark
+```
+
+### procs
+
+procs is a modern replacement for `ps` with a friendly output format.
+
+```bash
+brew install procs
+```
+
+### lazydocker
+
+lazydocker offers a TUI for managing Docker containers, images and logs.
+
+```bash
+brew install lazydocker
+```
+
+### rsync
+
+Install rsync through Homebrew to obtain the latest version with improved macOS compatibility.
+
+```bash
+brew install rsync
+```
+
+### progress
+
+progress monitors running coreutils commands and displays their progress.
+
+```bash
+brew install progress
+```
+
+### ts
+
+The `ts` command from `moreutils` prepends timestamps to standard input.
+
+```bash
+brew install moreutils
+```
+
+Use it in pipelines such as `your_command | ts '%Y-%m-%d %H:%M:%S'`.
+
+### asciicinema
+
+asciicinema records and shares terminal sessions.
+
+```bash
+brew install asciinema
+```
+
+Start a recording with `asciinema rec` and follow the prompts when finished.
+
+### agg
+
+agg converts animated GIFs to terminal-friendly animations.
+
+```bash
+brew install agg
+```
+
+### fabric-ai
+
+Install Fabric AI via `pipx` to keep the tool isolated from your global Python environment.
+
+```bash
+brew install pipx
+pipx install fabric-ai
+```
+
+Launch it with `fabric` to explore the available AI-powered workflows.
+
 ### Tailscale
 
 Tailscale connects locally hosted apps to your phone or other devices:
